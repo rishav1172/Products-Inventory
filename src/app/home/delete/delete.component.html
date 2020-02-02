@@ -1,0 +1,75 @@
+
+
+    <!--
+    Inspired in this dribbble
+    https://dribbble.com/shots/986548-Product-Catalog
+    -->
+    
+<div class="row" style="padding-top:15px">
+
+    <!-- <div class="row">
+        <div class="col-md-6" style="padding: 20px 4vh; text-align: left">
+            <button class="btn btn btn-danger" type="submit" (click)="sendCheckedCountries()">Delete</button>
+            <button class="btn btn-theme" type = "button" value = "submit" (click)="clearCheckedCountries()">Reset</button>
+        </div>
+    </div>
+    <br> -->
+    <div class="col-md-2 fixed" style="position:fixed;border-right: 1px solid lightgray;height: 100%;">
+        <pm-search></pm-search><br><br><br><br><br><br><br><br>
+        <div class="row" style="padding-top: 80px; margin-left: 20px;">
+            <label class="switch">
+                <input type="checkbox" (click)="clearAll()">
+                <span class="slider round"></span>
+            </label>
+            <p style="height: 34px;margin-top: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select all</p>
+        </div>
+        <div class="row" style="margin-left: 20px;">
+            <button [disabled]="loading" class="form-submit" (click)="sendCheckedCountries()">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Delete
+            </button>
+            &nbsp;&nbsp;
+        <!-- <button class="btn btn btn-danger" type="submit" (click)="sendCheckedCountries()">Delete</button> -->
+            <button class="btn btn-theme" type = "button" id="reset" (click)="clearCheckedCountries()">Reset</button>
+        </div>
+        
+    </div>
+    <div class="col-md-9 offset-md-2" style="padding-left: 50px;padding-top: 50px;">
+        <!-- <div class="col-md-12"> -->
+            <div class="row">
+                <div *ngFor="let product of filtered_products; let i=index" class="col-xs-10 col-sm-6 col-md-3" style="padding: 0 20px; margin-bottom: 50px;">   
+                    <div id="checkboxes">
+                        <input type="checkbox" name={{product.id}} id={{product.id}} [(ngModel)]="filtered_products[i].checked"/>
+                        <label class="whatever" for={{product.id}}>
+                            <article class="card-wrapper">
+                                <div class="image-holder">    
+                                    <div class="image-liquid image-holder--original" style="background-image: url('http://bit.ly/2tMBBTd')">
+                                    </div>
+                                </div>
+                                <div class="product-description">
+                                    <h1 class="product-description__title">
+                                            {{ product.name }}
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-8 product-description__category secondary-text">
+                                            {{ product.description }}
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 product-description__price">
+                                            ₹{{ product.price }}
+                                        </div>
+                                    </div>					
+                                </div>
+                            </article>
+                        </label>
+                    </div>
+                </div>    
+            </div>
+            
+        <!-- </div> -->
+    </div>
+    <div class="col-md-1">
+        <button *ngIf="isShow" id ="scrollup"(click)="gotoTop()">^ Go to top</button>
+    </div>
+
+</div>
+        

@@ -1,0 +1,163 @@
+﻿
+<div class="row">
+    <div class="col-md-6 offset-md-3" style="padding-top: 50px;padding-bottom: 50px;">
+<div class="card">
+    <div class="card-body">
+        <h4 style="font-weight: bold;">1. Products Inventory</h4>
+
+The proposed system should have provision to view the list of products and allow only the registered and authenticated users to add, edit, delete the products and view the product detail. The user interface to the system should be implemented using Angular. The data about the products should be managed in a JSON server. The client application should interface with the JSON Server through http to retrieve and store data.
+<br><br>
+<h6 style="font-weight: bold;">Note:</h6>
+
+1) The features given below are the minimum basic features that are required to be implemented. But you need not limit yourself. You can try to make it as close to the real system and it is left to your imagination and the domain knowledge you possess.
+<br>
+2) To have a responsive user interface and make the user interface better, you should use Bootstrap or Angular Material. Also, make the UI as modern as possible by using Bootstrap Cards, Grid, Carousel etc. instead of having just a plain table.
+<br>
+3) Appropriate input fields should be used to make it user friendly. For example, where date is inputted, you should use a date field and not a string field.
+<br>
+4) Validations should be done, wherever applicable, and make it user friendly.
+<br>
+5) Wherever list of records are viewed, there should be Search filter provided to only display a subset of records, so that user can quickly see it when there are many records to be viewed.
+<br>
+6) While viewing product list, when different fields of the products are displayed, customization should be provided to display only a subset of the fields.
+<br>
+7) It is mandatory to use Angular routing and have at least one feature module (i.e. Product Module). The feature module should be lazily loaded.
+<br>
+8) Angular Component Class, Component DOM test cases has to be implemented and the Karma output has to be submitted along with the output screenshots of the various features of the application.
+<br><br>
+Following functionalities should be implemented in the system.
+<br>
+1) Registration and authentication
+<br>
+2) About
+<br>
+3) Product Inventory Management
+
+
+
+
+
+
+
+
+
+<br><br>
+<h4 style="font-weight: bold;">Registration and Authentication</h4>
+
+Users should be able to register to identify themselves to the system so that they can sign in and perform add, edit and delete operations. <b>Viewing of product list summary should be allowed even without signing in.</b><br>
+
+1) Register
+<br>
+2) Sign In
+<br>
+3) View registration details
+<br><br>
+<h5 style="font-weight: bold; text-decoration: underline;">Register</h5>
+
+To register with the system, the following input details should be obtained.<br>
+
+1) Email ID
+<br>
+2) Password (for local authentication)
+<br>
+3) First name
+<br>
+4) Last name
+<br>
+5) Location
+<br>
+6) Mobile Number
+<br><br>
+<h6 style="font-weight: bold;">Note:</h6>
+<br>
+
+A) Email ID should be used as the user ID for signing in.
+<br>
+B) The user registration data should be maintained in JSON server apart from the products data information.
+<br><br>
+<h5 style="font-weight: bold; text-decoration: underline;">Sign In</h5>
+
+User should provide his/her email ID and sign in. If the user is already registered, the system should allow to sign in. Otherwise, it should display an error saying that the user is not registered. Authentication should be implemented using local authentication (maintaining user credentials in the backend server, i.e., JSON Server).
+<br><br>
+<h5 style="font-weight: bold; text-decoration: underline;">View registration details</h5>
+
+The user should be able to view the details he/she had provided during registration.
+<br><br>
+<h4>About</h4>
+
+Users should be able to view the purpose of the application.
+<br><br>
+<h4 style="font-weight: bold;">Product Inventory Management</h4>
+
+Users should be able to perform the following operations.
+<br>
+1) View Product List (Summary)
+<br>
+2) View Product Detail
+<br>
+3) Add Product
+<br>
+4) Update Product
+<br>
+5) Delete Product
+<br>
+6) Chart – Top viewed products
+<br><br>
+<h6 style="font-weight: bold;">Note:</h6>
+
+
+A) Viewing of products (Summary) should be allowed even without signing in. Add, Edit, Delete operations and View Product Detail should be allowed only for authenticated users.
+<br>
+B) Users using the application may or may not sign in. It is optional but when the user attempts to perform add, edit or delete operation or view product detail, route guard should kick in and prompt the user to sign in before performing these operations.
+<br>
+C) Product Inventory Management features should be organized within the Product Module (lazily loaded).
+<br><br>
+<h5 style="font-weight: bold; text-decoration: underline;">View Product List (Summary)</h5>
+
+The list of products in the inventory should be displayed. Few fields of the product can be displayed. Provision should be provided to customize which fields can be displayed.
+
+There should also be an option to navigate from this page to add a product or select a product to update or delete.
+<br>
+<br>
+
+<h5 style="font-weight: bold; text-decoration: underline;">View Product Detail</h5>
+
+Clicking on a product in “View Product List” page should navigate to display the complete details about the product.
+<br><br>
+<h5 style="font-weight: bold;text-decoration: underline;">Add Product</h5>
+
+While adding the product, the following input details can be accepted.
+<br>
+· Product name
+<br>
+· Product description
+<br>
+· Manufacturer
+<br>
+· Price
+<br>
+· Quantity
+<br>
+Product ID should be auto generated.
+<br><br>
+<h6 style="font-weight: bold;">Note:</h6> Use the route guard feature to notify if the user accidentally moves out of the “Add Product form page” after inputting some data in the form.
+<br><br>
+<h5 style="font-weight: bold; text-decoration: underline;">Update Product</h5>
+
+When the list of products are displayed, one product can be selected to update at a time. The product name, product description, manufacturer, price and quantity can be allowed to be updated.
+<br><br>
+<h6 style="font-weight: bold;">Note:</h6>Product ID should be used as the key to look for product details and it cannot be modified.
+<br><br>
+<h5 style="font-weight: bold;text-decoration: underline;">Delete Product (s)</h5>
+
+When the list of products are displayed, one or more products can be selected to delete at a time.
+<br><br>
+<h5 style="font-weight: bold; text-decoration: underline;">Chart – Top viewed products</h5>
+
+The details of the product which has been viewed often (through the “View Product detail”) is considered as a top viewed product. Provision should be there to display a chart of the top viewed products. It can be top 3, 5, 10, etc., which should be customizable.
+<br>
+You can refer chart.js and ng2-charts to understand how to display a chart. For an example, you can refer https://valor-software.com/ng2-charts/#BarChart
+    </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,106 @@
+<div class="row" style="padding-top: 65px;">
+
+    <section class="signup" style="margin:auto;">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Add Product</h2>
+                    <form class="register-form" id="register-form" [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-shopping-cart"></i></label>
+                            <input type="text" name="name" id="name" placeholder="Product Name" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="description"><i class="zmdi zmdi-comment-alt-text"></i></label>
+                            <input type="text" name="description" id="description" placeholder="Description" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="manufacturer"><i class="zmdi zmdi-balance"></i></label>
+                            <input type="text" name="manufacturer" id="manufacturer" placeholder="Manufacturer" formControlName="manufacturer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.manufacturer.errors }"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="price"><i style="font-weight: bold;">₹</i></label>
+                            <input type="number" name="price" id="price" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode==46' placeholder="Price" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity"><i class="zmdi zmdi-dropbox"></i></label>
+                            <input type="number" name="quantity" id="quantity" placeholder="Quantity" onkeypress='return event.charCode >= 49 && event.charCode <= 57' formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }"/>
+                        </div>
+                        <div class="form-group form-button">
+                            <button [disabled]="loading" class="form-submit border-0">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="../../assets/signup-image.jpg" alt="sing up image"></figure>
+                    <a id="reset" class="signup-image-link" (click)="addForm.reset()"><h6>Reset</h6></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- <div class="col-md-6 col-md-offset-3">
+        <div class="card">
+            <h4 class="card-header">Add Product</h4>
+            <div class="card-body">
+                <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="name">Product Name</label>
+                        <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">Required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                            <div *ngIf="f.description.errors.required">Required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"
+                        <label for="manufacturer">Manufacturer</label>
+                        <input type="text" formControlName="manufacturer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.manufacturer.errors }" />
+                        <div *ngIf="submitted && f.manufacturer.errors" class="invalid-feedback">
+                            <div *ngIf="f.manufacturer.errors.required">Required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" formControlName="price" step=".01" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                            <div *ngIf="f.price.errors.required">Required</div>
+                            <div *ngIf="f.price.errors.minlength">Price should be atleast 1</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }"/>
+                        <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+                            <div *ngIf="f.quantity.errors.required">Required</div>
+                            <div *ngIf="f.quantity.errors.min">Quantity should be atleast 1</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button [disabled]="loading" class="btn btn-primary">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Add Product
+                        </button>
+                        <button class="btn btn-theme pull-right" id="chut" type = "button" (click)="addForm.reset()">Reset</button>
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </div> -->
+</div>

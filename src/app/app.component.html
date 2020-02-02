@@ -1,0 +1,41 @@
+﻿<!-- nav -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="height: 50px;">
+    <img src="../assets/cart.png" style="height: 45px; width:45px "/>
+    <div class="container-fluid">
+        
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" routerLink="/product" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="router-link-active ">Home</a></li>
+            <li class="nav-item" ><a class="nav-link" routerLink="/product/view" routerLinkActive="router-link-active">View</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/product/add" routerLinkActive="router-link-active">Add</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/product/update" routerLinkActive="router-link-active">Update</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/product/delete" routerLinkActive="router-link-active">Delete</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/product/top" routerLinkActive="router-link-active">Top Viewed</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf="!currentUser"><a class="nav-link" routerLink="/login" routerLinkActive="router-link-active"><span class="fa fa-lg fa-sign-in" style="color: lightgray"></span> Login</a></li>
+            <li class="nav-item" *ngIf="!currentUser"><a class="nav-link" routerLink="/register" routerLinkActive="router-link-active"><span class="fa fa-lg fa-user-circle " style="color: lightgray"></span> Sign Up</a></li>
+            
+            
+
+            <li class="nav-item dropdown" *ngIf="currentUser">
+                <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" style="color: whitesmoke;" aria-haspopup="true" aria-expanded="false">
+                    {{currentUser.name}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" routerLink="/profile"><span class="fa fa-user"></span>  &nbsp;Profile</a>
+                    <a class="dropdown-item" (click)="logout()"><span class="fa fa-sign-out"></span> Logout</a>
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+</nav>
+
+
+<!-- main app container -->
+<div class="container-fluid">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+

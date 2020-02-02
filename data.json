@@ -1,0 +1,154 @@
+{
+  "credentials": [
+    {
+      "name": "Rishav Kumar",
+      "id": "test@gmail.com",
+      "password": "test123",
+      "phone": "9876543210",
+      "location": "Bangalore"
+    },
+    {
+      "id": "risab.mj@gmail.com",
+      "name": "Rishav Kumar",
+      "phone": "7898353453",
+      "location": "Banglore",
+      "password": "test123"
+    },
+    {
+      "id": "hello@gmail.com",
+      "name": "Rishav Kumar",
+      "phone": "9876543210",
+      "location": "Bangalore",
+      "password": "test@123"
+    },
+    {
+      "id": "xyz@gmail.com",
+      "name": "Bismillah",
+      "phone": "8255645698",
+      "location": "Banglore",
+      "password": "asdf123"
+    },
+    {
+      "id": "asdf@gmail.com",
+      "name": "XYZ",
+      "phone": "4848448484",
+      "location": "Banglore",
+      "password": "asdf123"
+    },
+    {
+      "id": "pokemon@gmail.com",
+      "name": "Rishav Kumar",
+      "phone": "4564644645",
+      "location": "Bihar",
+      "password": "zxc1234"
+    },
+    {
+      "id": "risab@gmail.com",
+      "name": "Rishav Kumar",
+      "phone": "3324343255",
+      "location": "fsd",
+      "password": "asdf123"
+    }
+  ],
+  "products": [
+    {
+      "name": "fasdaf",
+      "description": "123",
+      "manufacturer": "gsg",
+      "price": 150,
+      "quantity": 1,
+      "id": 12,
+      "viewed": 15
+    },
+    {
+      "name": "Garam Masala",
+      "description": "For putting in food",
+      "manufacturer": "MDH",
+      "price": 451,
+      "quantity": 10,
+      "id": 13,
+      "viewed": 18
+    },
+    {
+      "name": "Garam Masala",
+      "description": "For putting in food",
+      "manufacturer": "MDH",
+      "price": 451,
+      "quantity": 8,
+      "id": 2,
+      "viewed": 9
+    },
+    {
+      "name": "fasdaf",
+      "description": "123",
+      "manufacturer": "gsg",
+      "price": 150,
+      "quantity": 1,
+      "id": 3,
+      "viewed": 5
+    },
+    {
+      "name": "Garam Masala",
+      "description": "For putting in food",
+      "manufacturer": "MDH",
+      "price": 451,
+      "quantity": 8,
+      "id": 4,
+      "viewed": 3
+    },
+    {
+      "name": "fasdaf",
+      "description": "123",
+      "manufacturer": "gsg",
+      "price": 150,
+      "quantity": 1,
+      "id": 5,
+      "viewed": 11
+    },
+    {
+      "name": "Garam Masala",
+      "description": "For putting in food",
+      "manufacturer": "MDH",
+      "price": 451,
+      "quantity": 8,
+      "id": 6,
+      "viewed": 16
+    },
+    {
+      "name": "fasdaf",
+      "description": "123",
+      "manufacturer": "gsg",
+      "price": 150,
+      "quantity": 1,
+      "id": 7,
+      "viewed": 5
+    },
+    {
+      "name": "Garam Masala",
+      "description": "For putting in food",
+      "manufacturer": "MDH",
+      "price": 451,
+      "quantity": 8,
+      "id": 9,
+      "viewed": 10
+    },
+    {
+      "name": "Besan",
+      "description": "Besan Laddu",
+      "manufacturer": "Swastik",
+      "price": 56,
+      "quantity": 8,
+      "id": 14,
+      "viewed": 3
+    },
+    {
+      "name": "Sattu",
+      "description": "jkfsdjkl",
+      "manufacturer": "Catch",
+      "price": 48,
+      "quantity": 6,
+      "viewed": 0,
+      "id": 15
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	src: url("../../assets/fonts/poppins/poppins-v5-latin-300.eot");
+	/* IE9 Compat Modes */
+	src: local("Poppins Light"), local("Poppins-Light"), url("../../assets/fonts/poppins/poppins-v5-latin-300.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/poppins/poppins-v5-latin-300.woff2") format("woff2"), url("../../assets/fonts/poppins/poppins-v5-latin-300.woff") format("woff"), url("../../assets/fonts/poppins/poppins-v5-latin-300.ttf") format("truetype"), url("../../assets/fonts/poppins/poppins-v5-latin-300.svg#Poppins") format("svg");
+	/* Legacy iOS */ }
+
+#viewprofile {
+	color: black;
+	font-family: Poppins;
+	/* letter-spacing: px; */
+}
+
+
+.name {
+	font-size: 30px;
+	border-bottom: 2px solid black;
+	margin-bottom: 20px;
+}
+.name:first-letter {
+	font-size: 300%;
+}
+
+.label {
+	width: 70px;
+	font-weight: 800px;
+}
+
+.label, .phone, .mobile, .email {
+	display: inline-block;
+}
+
+.phone, .mobile, .email {
+	color: rgb(102, 100, 100);
+}
+
+.details-td {
+	border-right: 1px solid rgb(221, 221, 221);
+	white-space: nowrap;
+	
+	padding: 20px;
+	padding-right: 50px;
+}
+
+.description-td {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	color: rgb(102, 100, 100);
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: justify;
+	margin-top: 15px;
+}
+	.description {
+		outline: 0px solid transparent;
+		border: 0px solid transparent;
+	}

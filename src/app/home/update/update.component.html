@@ -1,0 +1,126 @@
+
+
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="position: relative;
+        display: table; 
+        overflow-y: auto;    
+        overflow-x: auto;
+        width: auto;
+        min-width: 340px;">
+        
+            <!-- Modal content-->
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div> -->
+            <div class="wrapper">
+                <button type="button" class="close" style="padding-right: 12px; padding-top:8px" data-dismiss="modal">&times;</button>
+                <div class="product-img">
+                    <img src="http://bit.ly/2tMBBTd" height="auto" width="auto">
+                </div>
+                <div class="signup-form" style="margin: 0; padding-top: 0px; padding-bottom: 25px; padding-right: 15px;padding-left: 15px;">
+                    <form class="register-form" id="register-form" [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-shopping-cart"></i></label>
+                            <input type="text" name="name" id="name" placeholder="Product Name" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="description"><i class="zmdi zmdi-comment-alt-text"></i></label>
+                            <input type="text" name="description" id="description" placeholder="Description" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="manufacturer"><i class="zmdi zmdi-balance"></i></label>
+                            <input type="text" name="manufacturer" id="manufacturer" placeholder="Manufacturer" formControlName="manufacturer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.manufacturer.errors }"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="price"><i style="font-weight: bold;">₹</i></label>
+                            <input type="number" name="price" id="price" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode==46' placeholder="Price" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"/>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 10px">
+                            <label for="quantity"><i class="zmdi zmdi-dropbox"></i></label>
+                            <input type="number" name="quantity" id="quantity" placeholder="Quantity" onkeypress='return event.charCode >= 48 && event.charCode <= 57' formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }"/>
+                        </div>
+                        <div class="form-group form-button" style="text-align: right">
+                            <button [disabled]="loading" class="form-submit border-0" style="padding:6px 30px">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                Update
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="product-info">
+                    <button type="button" class="close" style="padding:10px 15px" data-dismiss="modal">&times;</button>
+                    <div class="product-text">
+                        <h1>{{modal_product.name}}</h1>
+                        <h2>by {{modal_product.manufacturer}}</h2>
+                        <p>{{modal_product.description}}</p>
+                    </div>
+                    <div class="product-price-btn">
+                        <p>₹<span>{{modal_product.price}}</span></p>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> -->
+        </div>
+            
+    </div>
+</div>
+
+
+
+
+
+
+<div class="row" style="padding-top:15px">
+    <div class="col-md-2 fixed" style="position:fixed;border-right: 1px solid lightgray;height: 100%;">
+        <pm-search></pm-search>
+    </div>
+    <div class="col-md-9 offset-md-2" style="padding-left: 50px;padding-top: 50px;">
+
+            <div class="row">
+                <div *ngFor="let product of filtered_products;let i=index" class="col-xs-10 col-sm-6 col-md-3" style="padding: 0 20px">
+                    
+                    <article class="card-wrapper">
+                        <div class="image-holder" data-toggle="modal" data-target="#myModal" (click) = 'model_values(product, i)'>
+                            <!-- <a href="#" class="image-holder__link"></a> -->
+                            <div class="image-liquid image-holder--original" style="background-image: url('http://bit.ly/2tMBBTd')">
+                            </div>
+                        </div>
+
+                        <div class="product-description">
+                            <!-- title -->
+                            <h1 class="product-description__title">						
+                                    {{ product.name }}
+                            </h1>
+
+                            <!-- category and price -->
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-8 product-description__category secondary-text">
+                                    {{ product.manufacturer }}
+                                </div>
+                                <div class="col-xs-12 col-sm-4 product-description__price">
+                                    ₹{{ product.price }}
+                                </div>
+                            </div>					
+                        </div>
+                    </article>
+                </div>
+            </div>
+        <!-- </div> -->
+        
+    </div>
+    <div class="col-md-1">
+        <button *ngIf="isShow" id ="scrollup"(click)="gotoTop()">^ Go to top</button>
+    </div>       
+</div>
+    

@@ -1,0 +1,28 @@
+<div class="row" style="padding-top: 50px; padding-bottom: 20px;">
+  <div class="col-md-12" style="margin:auto;">
+    <h4>Top: 
+      <select [(ngModel)]="x" style="border: 0px;width: 90px;">
+        <!-- <option selectedd disabled ></option> -->
+        <option value="3" >3</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </h4>
+    
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div style="display: block" *ngIf='barChartData.length'>
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
+    <!-- <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button> -->
+  </div>
+</div>
